@@ -1,3 +1,58 @@
+Green Mushrooms
+Tasnim Chowdhury
+Kartik Vanjani
+Emily Ortiz
+pd 8
+---------------------
+Bingo
+
+/////////// Zone of Reflection \\\\\\\\\\\
+------------------------------------------
+OBSTACLES OVERCOME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wow we so BOSS bc...
+
+UNRESOLVED ISSUES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+blah blah pesky bug...
+maybe some of these will move into the Obs.Ovrcm section...
+
+COOL STUFF LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wow! oo!...
+
+MID-DEVELOPMENT DESIGN CHANGES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+we changed ___ to ___ bc...
+
+LESSONS LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tales of wisdom gained...
+||||||||||||||||||||||||||||||||||||||||||
+
+
+
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
+==============================================================
+
+
 2022-01-13 In Class
-- Set up files
-- Developed plan for bingo
+--------------------------------------------------------------
+Tasnim :: began typing plan, looked through LCT for major topics learned
+Kartik :: looked through LCT for major topics learned
+Emily :: configured Repo, registered team
+==============================================================
+
+
+2022-01-14 In Class
+--------------------------------------------------------------
+Tasnim :: plan for setting up bingo board
+Kartik :: plan for setting up bingo board
+Emily :: formatted devlog using template, plan for setting up bingo board
+==============================================================
