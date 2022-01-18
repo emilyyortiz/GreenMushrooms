@@ -66,3 +66,10 @@ markX, Board constructor, printBalls; methods for Game (extends Board): Game con
 methods for SortsNSearches: binsearch, linsearch, bubsort, selsort, inssort--  wrote skeletons for files
 Emily :: wrote paragraph portion of proposal, uploaded propro.pdf
 ==============================================================
+
+2022-01-18 In Class
+--------------------------------------------------------------
+Tasnim :: worked on methods in Bingo.java
+Emily :: worked on methods in Bingo.java
+==============================================================
+
