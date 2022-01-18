@@ -56,3 +56,11 @@ Tasnim :: plan for setting up bingo board
 Kartik :: plan for setting up bingo board
 Emily :: formatted devlog using template, plan for setting up bingo board
 ==============================================================
+
+2022-01-17 Home
+--------------------------------------------------------------
+Tasnim :: plan for all methods (and how they work) + instance variables for Woo, Board, Game (and biasGame), and SortsNSearches classes as well inheritance trees;
+methods for Woo: welcome, start, bingostep, main ; methods for Board (extends SortsNSearches): populateBalls, populateBoard, printBoard, checkBingo, drawBall,
+markX, Board constructor, printBalls; methods for Game (extends Board): Game constructor, bingoTurn; methods for biasGame (implements Game): drawball; 
+methods for SortsNSearches: binsearch, linsearch, bubsort, selsort, inssort
+==============================================================
