@@ -4,11 +4,10 @@ public class BingoCard {
   private SortsNSearches tools = new SortsNSearches();
 
   // populates ballBlower with 100 balls numbered 1 to 100
-
   public static int[] popBlower(int[] Blower) {
     for(int i = 0; i <= 99; i++){
       Blower[i] = i + 1;
-    }second for loop
+    }
     return Blower;
   }
 
@@ -25,7 +24,7 @@ public class BingoCard {
     System.out.println(foo);
   }
 
-  // populates 5 by 5 bingoCard with 24 random numbers from the blower (no repeats)
+  // populates bingoCard with bingoCard.length-1 random numbers from the blower (no repeats)
   public static Comparable[][] popCard( Comparable[][] Card, int[] Blower) {
     int[] usedValues = new int[25];
     for (int i = 0; i < 5; i++){
@@ -34,17 +33,16 @@ public class BingoCard {
           // checks if ball has already been used
           for(int x : usedValues){
             if(x == ballDrawn){
-              int ballDrawn = (int)(Math.random() * 100) + 1;
+              ballDrawn = (int)(Math.random() * 100) + 1;
             }
           }
-          Card[i[a]] = ballDrawn;
+         Card[i][a] = ballDrawn;
         } // end populating a row
     } // end populating entire card
-    Card[2[2]] = "X";
+    Card[2][2] = "X";
     return Card;
   }
 
-/*
   // prints 5 by 5 bingoCard in matrix format
   public static void printCard( Comparable[][] Card) {
 
@@ -52,26 +50,29 @@ public class BingoCard {
 
   // draws a random ball from the ballBlower
   public static int drawBall(int[] Blower, int drawnBall) {
+    return 0;
 
   }
 
   // marks X where the ballDrawn number is present in the bingo card
   public static Comparable[][] markX( Comparable[][] Card) {
+    return Card;
 
   }
 
   // checks 12 possible winning bingo states to see if the game is over
   public static boolean checkBingo( Comparable[][] Card) {
+    return false;
 
   }
-*/
+
   //testing above methods
   public static void main(String args[]){
     int[] ballBlower = new int[100];
     popBlower(ballBlower);
     printBlower(ballBlower);
-    Comparable[][] Card = new Comparable[][];
-    popCard(Card, ballBlower)
+    Comparable[][] Card = new Comparable[5][5];
+    popCard(Card, ballBlower);
   }
 
 } //end bingoCard

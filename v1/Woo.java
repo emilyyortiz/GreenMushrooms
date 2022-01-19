@@ -4,24 +4,24 @@ public class Woo {
     String player = "";
     int gameNum = 0;
   }
-/*
-  public void Welcome() {
+
+  public static void Welcome() {
 
   }
 
-  public void start() {
+  public static void start() {
 
   }
-*/
-  public void play() {
+
+  public static void play() {
 
   }
 
   public static void main( String[] args ) {
-    //Welcome();
-    //start();
+    Welcome();
+    start();
     play();
-    //System.out.println("Thanks for playing "+ gameNum + "games.")
+//    System.out.println("Thanks for playing "+ gameNum + "games.");
 
   } //end main
 

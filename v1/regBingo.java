@@ -1,6 +1,6 @@
 public class regBingo extends BingoGame {
 
-  private BingoCard Card = new BingoCard();
+  private static BingoCard Card = new BingoCard();
 
   public static void bingoTurn() {
     ballDrawn = Card.drawBall(ballBlower, ballDrawn);
