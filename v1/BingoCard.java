@@ -43,6 +43,7 @@ public class BingoCard {
     Card[2[2]] = "X";
     return Card;
   }
+
 /*
   // prints 5 by 5 bingoCard in matrix format
   public static void printCard( Comparable[][] Card) {
@@ -70,7 +71,7 @@ public class BingoCard {
     popBlower(ballBlower);
     printBlower(ballBlower);
     Comparable[][] Card = new Comparable[][];
-    popCard(Card; ballBlower)
+    popCard(Card, ballBlower)
   }
 
 } //end bingoCard
