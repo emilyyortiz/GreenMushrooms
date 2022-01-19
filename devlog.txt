@@ -17,6 +17,7 @@ UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
+all the methods in SortsNSearches were for arrays with Comparables, not ints like we need
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -63,7 +64,7 @@ Emily :: formatted devlog using template, plan for setting up bingo board
 --------------------------------------------------------------
 Tasnim :: plan for all methods (and how they work) + instance variables for Woo, Board, Game (and biasGame), and SortsNSearches classes as well inheritance trees;
 methods for Woo: welcome, start, bingostep, main ; methods for Board (extends SortsNSearches): populateBalls, populateBoard, printBoard, checkBingo, drawBall,
-markX, Board constructor, printBalls; methods for Game (extends Board): Game constructor, bingoTurn; methods for biasGame (implements Game): drawball; 
+markX, Board constructor, printBalls; methods for Game (extends Board): Game constructor, bingoTurn; methods for biasGame (implements Game): drawball;
 methods for SortsNSearches: binsearch, linsearch, bubsort, selsort, inssort--  wrote skeletons for files
 Emily :: wrote paragraph portion of proposal, uploaded propro.pdf
 ==============================================================
@@ -73,4 +74,3 @@ Emily :: wrote paragraph portion of proposal, uploaded propro.pdf
 Tasnim :: worked on methods in Bingo.java
 Emily :: worked on methods in Bingo.java
 ==============================================================
-

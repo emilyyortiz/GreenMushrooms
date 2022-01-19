@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class BingoCard {
-  private SortsNSearches tools = new SortsNSearches();
+  private static SortsNSearches tools = new SortsNSearches();
 
   // populates ballBlower with 100 balls numbered 1 to 100
   public static int[] popBlower(int[] Blower) {
@@ -22,6 +23,21 @@ public class BingoCard {
       foo = foo.substring( 0, foo.length() - 2);
     foo += "]";
     System.out.println(foo);
+  }
+
+  // draws a random ball from the ballBlower
+  public static int drawBall(int[] Blower, int drawnBall) {
+    int random = Blower[((int)(Math.random() * Blower.length) +1)];
+    if (random > -1) {
+      drawnBall = random;
+      int i = tools.binSearch(Blower, random);
+      Blower[i] = -1;
+      Blower = tools.selectionSort(Blower);
+    } else {
+      drawBall(Blower, drawnBall);
+    }
+    return drawnBall;
+
   }
 
   // populates bingoCard with bingoCard.length-1 random numbers from the blower (no repeats)
@@ -45,12 +61,6 @@ public class BingoCard {
 
   // prints 5 by 5 bingoCard in matrix format
   public static void printCard( Comparable[][] Card) {
-
-  }
-
-  // draws a random ball from the ballBlower
-  public static int drawBall(int[] Blower, int drawnBall) {
-    return 0;
 
   }
 
