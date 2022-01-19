@@ -30,9 +30,9 @@ public class BingoCard {
     int random = Blower[((int)(Math.random() * Blower.length) +1)];
     if (random > -1) {
       drawnBall = random;
-      int i = tools.binSearch(Blower, random);
+      int i = tools.linSearchint(Blower, random);
       Blower[i] = -1;
-      Blower = tools.selectionSort(Blower);
+      Blower = tools.selectionSortint(Blower);
     } else {
       drawBall(Blower, drawnBall);
     }

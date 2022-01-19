@@ -24,6 +24,21 @@ public class SortsNSearches {
     return tPos;
   }
 
+  public static int linSearchint ( int[] a, int target )
+  {
+    int tPos = -1;
+    int i = 0;
+
+    while ( i < a.length ) {
+        if (a[i] == target){
+            tPos = i;
+            break;
+        }
+        i++;
+    }
+    return tPos;
+  }
+
   /**
      int binSearch(Comparable[],Comparable) -- searches an array of
      Comparables for target Comparable
@@ -169,6 +184,44 @@ public class SortsNSearches {
 
     return data;
   }//end selectionSort
+
+  public static void selectionSortVint( int[] data )
+  {
+    int n = data.length;
+
+        // One by one move boundary of unsorted subarray
+        for (int i = 0; i < n-1; i++)
+        {
+            // Find the minimum element in unsorted array
+            int min_idx = i;
+            for (int j = i+1; j < n; j++)
+                if (data[j] < data[min_idx])
+                    min_idx = j;
+
+            // Swap
+            int temp = data[min_idx];
+            data[min_idx] = data[i];
+            data[i] = temp;
+    }
+  }//end selectionSort
+
+  public static int[] selectionSortint( int[] input )
+  {
+    //declare and initialize empty ArrayList for copying
+    int[] data = new int[input.length];
+
+    //copy input ArrayList into working ArrayList
+    for( int i = 0; i < input.length; i++ ) {
+      data[i] = input[i];
+    }
+
+    //sort working ArrayList
+    selectionSortVint( data );
+
+    return data;
+  }//end selectionSort
+
+
 
   // VOID version of InsertionSort
   // Rearranges elements of input ArrayList
