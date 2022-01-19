@@ -26,8 +26,8 @@ public class BingoCard {
   }
 
   // draws a random ball from the ballBlower
-  public static int drawBall(int[] Blower, int drawnBall) {
-    int random = Blower[((int)(Math.random() * Blower.length) +1)];
+  public static Object[] drawBall(int[] Blower, int drawnBall) {
+    int random = (int)Blower[((int)(Math.random() * Blower.length) +1)];
     if (random > -1) {
       drawnBall = random;
       int i = tools.linSearchint(Blower, random);
@@ -36,7 +36,7 @@ public class BingoCard {
     } else {
       drawBall(Blower, drawnBall);
     }
-    return drawnBall;
+    return new Object[]{drawnBall, Blower};
 
   }
 
@@ -80,9 +80,13 @@ public class BingoCard {
   public static void main(String args[]){
     int[] ballBlower = new int[100];
     popBlower(ballBlower);
+    int drawnBall = 0;
+    drawnBall = (int)(drawBall(ballBlower, drawnBall))[0];
+    ballBlower = (int[])(drawBall(ballBlower, drawnBall))[1];
     printBlower(ballBlower);
     Comparable[][] Card = new Comparable[5][5];
-    popCard(Card, ballBlower);
+
+//    popCard(Card, ballBlower);
   }
 
 } //end bingoCard
