@@ -27,6 +27,7 @@ MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
 we added a new version/option of bingo to add variety into gameplay
+changed the ballBlower to go from 1 to 99 instead of 1 to 100 to make formatting the card easier 
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
