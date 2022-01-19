@@ -73,4 +73,12 @@ Emily :: wrote paragraph portion of proposal, uploaded propro.pdf
 --------------------------------------------------------------
 Tasnim :: worked on methods in Bingo.java
 Emily :: worked on methods in Bingo.java
+Kartik:: Out due to the ro ro.
+==============================================================
+
+2022-01-18 Home
+--------------------------------------------------------------
+Tasnim :: worked on methods in Bingo.java
+Emily :: worked on methods in Bingo.java
+Kartik:: worked on uml diagrams
 ==============================================================
