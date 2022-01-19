@@ -83,3 +83,10 @@ Tasnim :: worked on methods in Bingo.java
 Emily :: worked on methods in Bingo.java
 Kartik:: worked on uml diagrams
 ==============================================================
+
+
+2022-01-19 In Class
+--------------------------------------------------------------
+Tasnim :: worked on markX method in Bingo.java 
+==============================================================
+
