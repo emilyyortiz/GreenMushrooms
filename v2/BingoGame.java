@@ -2,7 +2,7 @@ public class BingoGame {
 
   private BingoCard Card = new BingoCard();
 
-  protected static int[] ballBlower = new int[100];
+  protected static int[] ballBlower = new int[99];
   protected static Comparable[][] bingoCard = new Comparable[5][5];
   protected static int ballDrawn;
 
@@ -21,7 +21,7 @@ public class BingoGame {
   }
 
   public static void bingoTurn() {
-    
+
   }
 
 }
