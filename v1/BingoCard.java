@@ -48,19 +48,36 @@ public class BingoCard {
           int ballDrawn = (int)(Math.random() * 100) + 1;
           // checks if ball has already been used
           for(int x : usedValues){
-            if(x == ballDrawn){
+            while(x == ballDrawn){
               ballDrawn = (int)(Math.random() * 100) + 1;
             }
           }
          Card[i][a] = ballDrawn;
+         usedValues[5 * i + a] = ballDrawn;
         } // end populating a row
     } // end populating entire card
     Card[2][2] = "X";
+    System.out.println("Printing usedValues:");
+    printBlower(usedValues);
     return Card;
   }
 
   // prints 5 by 5 bingoCard in matrix format
   public static void printCard( Comparable[][] Card) {
+    System.out.println("Temporary formatting of printCard:");
+    for (int x = 0; x < 5; x++){
+      Comparable[] Blower = Card[x];
+      // copied from printBlower
+      String foo = "[";
+      for( int i = 0; i < Blower.length; i++ ) {
+        foo += Blower[i] + ", ";
+      }
+      if ( foo.length() > 1 )
+        //shave off trailing comma
+        foo = foo.substring( 0, foo.length() - 2);
+      foo += "]";
+      System.out.println(foo);
+    }
 
   }
 
@@ -85,8 +102,8 @@ public class BingoCard {
     ballBlower = (int[])(drawBall(ballBlower, drawnBall))[1];
     printBlower(ballBlower);
     Comparable[][] Card = new Comparable[5][5];
-
-//    popCard(Card, ballBlower);
+    popCard(Card, ballBlower);
+    printCard(Card);
   }
 
 } //end bingoCard
