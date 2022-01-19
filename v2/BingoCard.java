@@ -86,7 +86,7 @@ public class BingoCard {
   public static Comparable[][] markX( Comparable[][] Card, int ballDrawn) {
     int match = -1;
     for (Comparable[] row : Card) {
-      match = (int)(tools.binSearch(row, (Comparable)ballDrawn));
+      match = (int)(tools.linSearch(row, (Comparable)ballDrawn));
       if (match > -1) {
         row[match] = "X";
         match = -1;
@@ -109,9 +109,11 @@ public class BingoCard {
     popBlower(ballBlower);
     popCard(Card, ballBlower);
     int drawnBall = 0;
-    printBlower(ballBlower);
+//    printBlower(ballBlower);
     drawnBall = (int)(drawBall(ballBlower, drawnBall))[0];
     ballBlower = (int[])(drawBall(ballBlower, drawnBall))[1];
+    drawnBall = (int)Card[1][1];
+    markX(Card, drawnBall);
     printCard(Card);
   }
 
