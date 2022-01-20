@@ -27,7 +27,7 @@ MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
 we added a new version/option of bingo to add variety into gameplay
-changed the ballBlower to go from 1 to 99 instead of 1 to 100 to make formatting the card easier 
+changed the ballBlower to go from 1 to 99 instead of 1 to 100 to make formatting the card easier
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -87,13 +87,12 @@ Kartik:: worked on uml diagrams
 
 2022-01-19 In Class
 --------------------------------------------------------------
-Tasnim :: worked on markX method in Bingo.java 
+Tasnim :: finished markX method in Bingo.java
 ==============================================================
 
 2022-01-19 Home
 --------------------------------------------------------------
-Tasnim :: worked on markX method in Bingo.java 
+Tasnim :: Finished checkBingo method in Bingo.java 
 Emily :: Worked on making Woo.java compilable
 Kartik: Worked on flowchart and README, and caught something in biasBingo.
 ==============================================================
-
