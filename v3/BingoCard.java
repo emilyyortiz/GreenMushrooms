@@ -46,31 +46,6 @@ public class BingoCard {
 
   }
 
-/*
-  // populates bingoCard with bingoCard.length-1 random numbers from the blower (no repeats)
-  public static Comparable[][] popCard( Comparable[][] Card, int[] Blower) {
-    System.out.println("popCard method in progress.");
-    int[] usedValues = new int[25];
-    for (int i = 0; i < 5; i++){
-        for (int a = 0; a < 5; a++){
-          int ballDrawn = (int)(Math.random() * 99) + 1;
-          // checks if ball has already been used
-          for(int x : usedValues){
-            while(x == ballDrawn){
-              ballDrawn = (int)(Math.random() * 99) + 1;
-            }
-          }
-         Card[i][a] = ballDrawn;
-         usedValues[5 * i + a] = ballDrawn;
-        } // end populating a row
-    } // end populating entire card
-    Card[2][2] = "X";
-//    System.out.println("Printing usedValues:");
-//    printBlower(usedValues);
-    return Card;
-  }
-*/
-
   // populates bingoCard with bingoCard.length-1 random numbers from the blower (no repeats)
   public static Comparable[][] popCard( Comparable[][] Card, int[] Blower) {
     for (Comparable[] row : Card ) {
