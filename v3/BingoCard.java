@@ -3,10 +3,8 @@ GreenMushrooms: Emily Ortiz, Tasnim Chowdhury, Kartik Vanjani
 APCS PD8
 FP: Show Us What You Got
 2022-01-20
-Time Spent: 5.5 Hours
+Time Spent: 11 Hours
 */
-//import java.util.ArrayList;
-import java.util.Random;
 
 public class BingoCard {
   private static SortsNSearches tools = new SortsNSearches();
@@ -48,6 +46,7 @@ public class BingoCard {
 
   }
 
+/*
   // populates bingoCard with bingoCard.length-1 random numbers from the blower (no repeats)
   public static Comparable[][] popCard( Comparable[][] Card, int[] Blower) {
     System.out.println("popCard method in progress.");
@@ -68,6 +67,25 @@ public class BingoCard {
     Card[2][2] = "X";
 //    System.out.println("Printing usedValues:");
 //    printBlower(usedValues);
+    return Card;
+  }
+*/
+
+  // populates bingoCard with bingoCard.length-1 random numbers from the blower (no repeats)
+  public static Comparable[][] popCard( Comparable[][] Card, int[] Blower) {
+    for (Comparable[] row : Card ) {
+      int pos = 0;
+      int randomIndex = -1;
+      while (pos < row.length) {
+        int temp = (int)(Math.random() * Blower.length-1);
+        if ( Blower[temp] != -1) {
+          randomIndex = temp;
+          row[pos] = Blower[randomIndex];
+          pos++;
+        }
+      }
+    }
+    Card[2][2] = "X";
     return Card;
   }
 
