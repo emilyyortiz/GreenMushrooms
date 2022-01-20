@@ -1,3 +1,10 @@
+/*
+GreenMushrooms: Emily Ortiz, Tasnim Chowdhury, Kartik Vanjani
+APCS PD8
+FP: Show Us What You Got
+2022-01-20
+Time Spent: 5.5 Hours
+*/
 public class BingoGame {
 
   private BingoCard Card = new BingoCard();
