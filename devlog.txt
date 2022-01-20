@@ -93,7 +93,7 @@ Tasnim :: worked on markX method in Bingo.java
 2022-01-19 Home
 --------------------------------------------------------------
 Tasnim :: worked on markX method in Bingo.java 
-Emily :: Worked on methods in BingoGame
+Emily :: Worked on making Woo.java compilable
 Kartik: Worked on flowchart and README, and caught something in biasBingo.
 ==============================================================
 
