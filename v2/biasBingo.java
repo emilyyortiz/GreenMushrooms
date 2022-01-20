@@ -9,10 +9,11 @@ public class biasBingo extends BingoGame {
 
   public static void bingoTurn() {
     ballDrawn = drawBall(ballBlower, ballDrawn);
-    bingoCard = Card.markX(bingoCard);
+    bingoCard = Card.markX(bingoCard, ballDrawn);
     turn_num++;
     Card.printCard( bingoCard);
     Card.printBlower( ballBlower);
+    System.out.print("\nPress enter to continue:");
   }
 
 
