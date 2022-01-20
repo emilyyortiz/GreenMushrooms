@@ -13,5 +13,8 @@
 ##                              REMEMBER TO HAVE FUN, and from our team to you, we hope you get BINGOOOOO.
 
 ##                                                How To Launch Instructions:
-
+- Cd into our team Repo.
+- Type in the command "java woo".
+- Follow the lines that pop up, and...
+       LET THE GAME BEGIN!
 
