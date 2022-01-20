@@ -15,7 +15,7 @@ public class biasBingo extends BingoGame {
     return 0;
   }
 
-  public static void bingoTurn() {
+  public void bingoTurn() {
     ballDrawn = drawBall(ballBlower, ballDrawn);
     bingoCard = Card.markX(bingoCard, ballDrawn);
     turn_num++;

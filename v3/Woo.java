@@ -55,13 +55,14 @@ public class Woo {
 
   //WRONG!
   public static void play(String type) {
-    BingoGame game = new BingoGame();
+    BingoGame game = new regBingo();
     if (type.equals("regBingo")) {
-      regBingo regBingo = game;
+      game = new regBingo();
     }
     if (type.equals("biasBingo")) {
-      biasBingo biasBingo = game;
+      game = new biasBingo();
     }
+    game.initializeGame();
     game.bingoTurn();
     in.nextLine();
   }

@@ -27,7 +27,7 @@ public class BingoGame {
     Card.printCard(bingoCard);
   }
 
-  public static void bingoTurn() {
+  public void bingoTurn() {
 
   }
 
