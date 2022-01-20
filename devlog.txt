@@ -92,7 +92,7 @@ Tasnim :: finished markX method in Bingo.java
 
 2022-01-19 Home
 --------------------------------------------------------------
-Tasnim :: Finished checkBingo method in Bingo.java 
+Tasnim :: Finished checkBingo and printCard method in Bingo.java. Also worked on Woo.java methods.
 Emily :: Worked on making Woo.java compilable
 Kartik: Worked on flowchart and README, and caught something in biasBingo.
 ==============================================================
