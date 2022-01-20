@@ -8,6 +8,7 @@ public class regBingo extends BingoGame {
     turn_num++;
     Card.printCard( bingoCard);
     Card.printBlower( ballBlower);
+    System.out.print("\nPress enter to continue:");
   }
 
 }

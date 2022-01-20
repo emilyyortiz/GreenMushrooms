@@ -4,6 +4,7 @@ public class biasBingo extends BingoGame {
 
   // draws a ball from the upper or lower half ballBlower
   public static int drawBall(int[] Blower, int drawnBall) {
+    System.out.println("Note: Method in progress.");
     return 0;
   }
 

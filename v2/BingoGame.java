@@ -1,6 +1,6 @@
 public class BingoGame {
 
-  private BingoCard Card = new BingoCard();
+  protected BingoCard Card = new BingoCard();
 
   protected static int[] ballBlower = new int[99];
   protected static Comparable[][] bingoCard = new Comparable[5][5];

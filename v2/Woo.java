@@ -15,13 +15,30 @@ public class Woo {
     System.out.println("Made by Tasnim Chowdhury, Kartik Vanjani, and Emily Ortiz\n\n");
     System.out.print("What is your name? ");
     String player = in.nextLine();
-    System.out.println("Hi there " + player + "! Press enter to get started:");
+    if (player.equals("Mr. Mykolyk")) {
+      System.out.println("OMG, we love your class!");
+    }
+    System.out.println("Hi there, " + player + "! Press enter to get started:");
   }
 
   public static void start() {
     String statement = in.nextLine();
     while (!statement.equals("No")){
-      play();
+      System.out.print("Type 0 for Regular Bingo. Type 1 for Biased Bingo. ");
+      String gameType = in.nextLine();
+      String type = "";
+      try {
+        if (gameType.equals("0")) {
+           type = "regBingo";
+        }
+        if (gameType.equals("1")) {
+           type = "biasBingo";
+        }
+      }
+      catch (Exception e) {
+        System.out.println("Please type a valid input!");
+      }
+      play(type);
       System.out.println("Temporary print statement. Pretend a game is played.");
       gameCtr++;
       System.out.print("Would you like to play again? Type 'No' to stop and any key to continue: ");
@@ -29,8 +46,15 @@ public class Woo {
     }
   }
 
-  public static void play() {
-    biasBingo game = new biasBingo();
+  //WRONG!
+  public static void play(String type) {
+    BingoGame game = new BingoGame();
+    if (type.equals("regBingo")) {
+      regBingo regBingo = game;
+    }
+    if (type.equals("biasBingo")) {
+      biasBingo biasBingo = game;
+    }
     game.bingoTurn();
     in.nextLine();
   }
@@ -38,7 +62,7 @@ public class Woo {
   public static void main( String[] args ) {
     Welcome();
     start();
-    System.out.println("\nThanks for playing "+ gameCtr + " games.");
+    System.out.println("\nThanks for playing "+ gameCtr + " game(s)!");
 
   } //end main
 

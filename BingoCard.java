@@ -43,6 +43,7 @@ public class BingoCard {
 
   // populates bingoCard with bingoCard.length-1 random numbers from the blower (no repeats)
   public static Comparable[][] popCard( Comparable[][] Card, int[] Blower) {
+    System.out.println("Note: Method in progress.");
     int[] usedValues = new int[25];
     for (int i = 0; i < 5; i++){
         for (int a = 0; a < 5; a++){
@@ -65,7 +66,7 @@ public class BingoCard {
 
   // prints 5 by 5 bingoCard in matrix format
   public static void printCard( Comparable[][] Card) {
-    System.out.println("Temporary formatting of printCard:");
+    System.out.println("Note: Method in progress.");
     for (int x = 0; x < 5; x++){
       Comparable[] Blower = Card[x];
       // copied from printBlower
