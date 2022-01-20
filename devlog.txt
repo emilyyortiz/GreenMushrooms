@@ -94,6 +94,6 @@ Tasnim :: worked on markX method in Bingo.java
 --------------------------------------------------------------
 Tasnim :: worked on markX method in Bingo.java 
 Emily :: Worked on methods in BingoGame
-Kartik: Worked on flowchart and README, and corrected something in biasBingo.java.
+Kartik: Worked on flowchart and README, and caught something in biasBingo.
 ==============================================================
 
