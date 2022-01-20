@@ -98,9 +98,68 @@ public class BingoCard {
 
   // checks 12 possible winning bingo states to see if the game is over
   public static boolean checkBingo( Comparable[][] Card) {
-    return false;
+    boolean match = false;
 
+    // checks 5 rows
+    for (Comparable[] row : Card ) {
+      for (Comparable value : row) {
+        if (value.equals("X")) {
+          match = true;
+        } else {
+          match = false;
+          break;
+        }
+      }
+      if (match == true) {
+        return match;
+      }
+    }
+
+    // checks 5 columns
+    for (int i = 0; i <= Card.length-1; i++) {
+      for (Comparable[] row : Card) {
+        if (row[i].equals("X")) {
+          match = true;
+        } else {
+          match = false;
+          break;
+        }
+      }
+      if (match == true) {
+        return match;
+    }
   }
+
+    // checks top-left to bottom-right diagonal
+    for (int i = 0; i <= Card[0].length-1; i++) {
+      if ((Card[i][i]).equals("X")) {
+        match = true;
+      } else {
+        match = false;
+        break;
+      }
+    }
+    if (match == true) {
+      return match;
+  }
+
+  // checks top-right to bottom-left diagonal
+  int column = 0;
+  for (int i = Card[0].length-1; i >= 0; i--) {
+    if ((Card[i][column]).equals("X")) {
+      match = true;
+    } else {
+      match = false;
+      break;
+    }
+    column++;
+    }
+    if (match == true) {
+      return match;
+  }
+
+  return match;
+ } //end method
 
   //testing above methods
   public static void main(String args[]){
@@ -112,9 +171,19 @@ public class BingoCard {
 //    printBlower(ballBlower);
     drawnBall = (int)(drawBall(ballBlower, drawnBall))[0];
     ballBlower = (int[])(drawBall(ballBlower, drawnBall))[1];
-    drawnBall = (int)Card[1][1];
+    drawnBall = (int)Card[0][4];
     markX(Card, drawnBall);
+    drawnBall = (int)Card[1][3];
+    markX(Card, drawnBall);
+//    drawnBall = (int)Card[2][2];
+    markX(Card, drawnBall);
+    drawnBall = (int)Card[3][1];
+    markX(Card, drawnBall);
+    drawnBall = (int)Card[4][0];
+    markX(Card, drawnBall);
+
     printCard(Card);
+    System.out.println(checkBingo(Card));
   }
 
 } //end bingoCard
