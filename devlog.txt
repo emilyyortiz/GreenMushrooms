@@ -90,3 +90,10 @@ Kartik:: worked on uml diagrams
 Tasnim :: worked on markX method in Bingo.java 
 ==============================================================
 
+2022-01-19 Home
+--------------------------------------------------------------
+Tasnim :: worked on markX method in Bingo.java 
+Emily :: Worked on methods in BingoGame
+Kartik: Worked on flowchart and README, and corrected something in biasBingo.java.
+==============================================================
+
