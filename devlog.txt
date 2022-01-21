@@ -111,3 +111,8 @@ Emily :: Worked on Woo.java and bingoGame.java
 Tasnim :: Finished BingoCard.java methods, BingoGame.java methods, and Woo.java methods
 Kartik: Updated flowchart, made sure headings were present on all files.
 ==============================================================
+
+2022-01-21 Before Class
+--------------------------------------------------------------
+Emily :: Worked on biasBingo.java
+==============================================================
