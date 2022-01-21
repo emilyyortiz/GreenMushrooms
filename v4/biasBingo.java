@@ -9,6 +9,7 @@ public class biasBingo extends BingoGame {
 
   private static BingoCard Card = new BingoCard();
 
+/*
   // draws a ball from the upper or lower half ballBlower
   public static Object[] drawBall(int[] Blower, int drawnBall) {
     System.out.print("Type 0 to draw a ball from the lower half, and any other key to draw from the upper half: ");
@@ -28,9 +29,9 @@ public class biasBingo extends BingoGame {
     }
     System.out.println();
     return new Object[]{drawnBall, Blower};
-
   }
 
+*/
   biasBingo() {
 
   }

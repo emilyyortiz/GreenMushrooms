@@ -102,6 +102,7 @@ public class BingoCard {
     boolean found = false;
     for (Comparable[] row : Card) {
       match = (int)(tools.linSearch(row, (Comparable)ballDrawn));
+      System.out.println(match);
       if (match > -1) {
         Comparable temp = row[match];
         row[match] = "X";
@@ -109,6 +110,10 @@ public class BingoCard {
         match = -1;
         found = true;
 
+      } else {
+        System.out.println("AGHHH");
+        found = false;
+        break;
       }
     }
     if (found == false) {
