@@ -5,6 +5,7 @@ FP: Show Us What You Got
 2022-01-20
 Time Spent: 5.5 Hours
 */
+
 import java.util.Scanner;
 
 public class Woo {
@@ -23,7 +24,9 @@ public class Woo {
     System.out.print("What is your name? ");
     String player = in.nextLine();
     if (player.equals("Mr. Mykolyk")) {
-      System.out.println("OMG, we love your class!");
+      System.out.println();
+      System.out.println("OMG, we love your class. You are the best APCS teacher!");
+      System.out.println("");
     }
     System.out.println("Hi there, " + player + "! Press enter to get started:");
   }
@@ -46,25 +49,19 @@ public class Woo {
         System.out.println("Please type a valid input!");
       }
       play(type);
-      System.out.println("Temporary print statement. Pretend a game is played.");
       gameCtr++;
       System.out.print("Would you like to play again? Type 'No' to stop and any key to continue: ");
       statement = in.nextLine();
     }
   }
 
-  //WRONG!
   public static void play(String type) {
-    BingoGame game = new regBingo();
     if (type.equals("regBingo")) {
-      game = new regBingo();
+      BingoGame game = new regBingo();
     }
     if (type.equals("biasBingo")) {
-      game = new biasBingo();
+      BingoGame game = new biasBingo();
     }
-    game.initializeGame();
-    game.bingoTurn();
-    in.nextLine();
   }
 
   public static void main( String[] args ) {

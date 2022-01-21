@@ -2,8 +2,6 @@
 GreenMushrooms: Emily Ortiz, Tasnim Chowdhury, Kartik Vanjani
 APCS PD8
 FP: Show Us What You Got
-2022-01-20
-Time Spent: 5.5 Hours
 */
 ---------------------
 Bingo
@@ -13,13 +11,14 @@ Bingo
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow we so BOSS bc...
-figured out intheritance for our classes to make different versions of bingo game
-
+figured out inheritance for our classes to make different versions of bingo game
+figured out how to "save" the state of ballBlower after drawBall method by making it return an array of 2 Objects
+Added methods in SortsNSearches that took int arrays instead of Comparable arrays
+Figured out that we had to make a copy of ballBlower in popCard to keep ballBlower unchanged
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
-all the methods in SortsNSearches were for arrays with Comparables, not ints like we need
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -30,11 +29,13 @@ MID-DEVELOPMENT DESIGN CHANGES
 we changed ___ to ___ bc...
 we added a new version/option of bingo to add variety into gameplay
 changed the ballBlower to go from 1 to 99 instead of 1 to 100 to make formatting the card easier
+Made most of the gameplay process in SuperClass BingoGame instead of in Woo or in subclasses
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
 ||||||||||||||||||||||||||||||||||||||||||
+Return Object arrays when you want to return multiple values
 
 
 
@@ -97,4 +98,16 @@ Tasnim :: finished markX method in Bingo.java
 Tasnim :: Finished checkBingo and printCard method in Bingo.java. Also worked on Woo.java methods.
 Emily :: Worked on making Woo.java compilable
 Kartik: Worked on flowchart and README, and caught something in biasBingo.
+==============================================================
+
+2022-01-20 Class
+--------------------------------------------------------------
+Tasnim :: Fixed popCard method in BingoCard.java
+Emily :: Worked on Woo.java and bingoGame.java
+==============================================================
+
+2022-01-20 Home
+--------------------------------------------------------------
+Tasnim :: Finished BingoCard.java methods, BingoGame.java methods, and Woo.java methods
+Kartik: Worked on flowchart
 ==============================================================

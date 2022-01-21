@@ -18,18 +18,15 @@ public class SortsNSearches {
   **/
   public static int linSearch ( Comparable[] a, Comparable target )
   {
-    int tPos = -1;
-    int i = 0;
-
-    while ( i < a.length ) {
-        if (a[i] == target){
-            tPos = i;
-            break;
+    int n = a.length;
+        for (int i = 0; i < n; i++)
+        {
+            if (a[i] == target)
+                return i;
         }
-        i++;
-    }
-    return tPos;
+        return -1;
   }
+
 
   public static int linSearchint ( int[] a, int target )
   {
@@ -45,6 +42,7 @@ public class SortsNSearches {
     }
     return tPos;
   }
+
 
   /**
      int binSearch(Comparable[],Comparable) -- searches an array of

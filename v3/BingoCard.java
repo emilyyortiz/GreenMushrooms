@@ -20,42 +20,57 @@ public class BingoCard {
   // prints ballBlower
   public static void printBlower(int[] Blower) {
     String foo = "[";
+    int ball_num = 0;
     for( int i = 0; i < Blower.length; i++ ) {
-      foo += Blower[i] + ", ";
+      if (Blower[i] != -1) {
+        foo += Blower[i] + ", ";
+        ball_num++;
+      }
     }
     if ( foo.length() > 1 )
       //shave off trailing comma
       foo = foo.substring( 0, foo.length() - 2);
     foo += "]";
-    System.out.println("Current state of the ballBlower:");
+    System.out.println(ball_num +" Balls left in the Ball Blower:");
+    System.out.println();
     System.out.println(foo);
   }
 
   // draws a random ball from the ballBlower
   public static Object[] drawBall(int[] Blower, int drawnBall) {
-    int random = (int)Blower[((int)(Math.random() * Blower.length-1) +1)];
+    int random = (int)Blower[((int)(Math.random() * Blower.length-1))];
     if (random > -1) {
       drawnBall = random;
       int i = tools.linSearchint(Blower, random);
       Blower[i] = -1;
       Blower = tools.selectionSortint(Blower);
+      System.out.print("You drew a "+ drawnBall + " ball!\n");
     } else {
       drawBall(Blower, drawnBall);
     }
+    System.out.println();
     return new Object[]{drawnBall, Blower};
 
   }
 
   // populates bingoCard with bingoCard.length-1 random numbers from the blower (no repeats)
   public static Comparable[][] popCard( Comparable[][] Card, int[] Blower) {
+    //make deep copy of blower
+    int[] data = new int[Blower.length];
+    for (int i = 0; i < Blower.length; i++) {
+      data[i] = Blower[i];
+    }
+    //populating from the deep copy
     for (Comparable[] row : Card ) {
       int pos = 0;
       int randomIndex = -1;
       while (pos < row.length) {
-        int temp = (int)(Math.random() * Blower.length-1);
-        if ( Blower[temp] != -1) {
+        int temp = (int)(Math.random() * data.length);
+        if ( data[temp] != -1) {
           randomIndex = temp;
-          row[pos] = Blower[randomIndex];
+          row[pos] = data[randomIndex];
+          //making sure there are no repeats
+          data[randomIndex] = -1;
           pos++;
         }
       }
@@ -66,8 +81,7 @@ public class BingoCard {
 
   // prints 5 by 5 bingoCard in matrix format
   public static void printCard( Comparable[][] Card) {
-    System.out.println("");
-    System.out.println("Your current BingoCard:");
+    System.out.println("Your current Bingo Card:");
     System.out.println("");
     int rows = Card.length;
         int columns = Card[0].length;
@@ -85,19 +99,27 @@ public class BingoCard {
   // marks X where the ballDrawn number is present in the bingo card
   public static Comparable[][] markX( Comparable[][] Card, int ballDrawn) {
     int match = -1;
+    boolean found = false;
     for (Comparable[] row : Card) {
       match = (int)(tools.linSearch(row, (Comparable)ballDrawn));
       if (match > -1) {
+        Comparable temp = row[match];
         row[match] = "X";
+        System.out.println("X marks the spot at " + temp + ".\n");
         match = -1;
+        found = true;
+
       }
+    }
+    if (found == false) {
+      System.out.println("No matches this time D:\n");
     }
 
     return Card;
   }
 
   // checks 12 possible winning bingo states to see if the game is over
-  public static boolean checkBingo( Comparable[][] Card) {
+  public static boolean checkBingo( Comparable[][] Card, int turn_num) {
     boolean match = false;
 
     // checks 5 rows
@@ -155,35 +177,43 @@ public class BingoCard {
     column++;
     }
     if (match == true) {
+      System.out.println("\nYou've got BINGO!\n");
       return match;
+  }
+  if (turn_num >= Card[0].length ) {
+    System.out.println("\nSorry buddy, no BINGO for you yet! :( \n");
   }
 
   return match;
  } //end method
 
+/*
   //testing above methods
   public static void main(String args[]){
     int[] ballBlower = new int[99];
     Comparable[][] Card = new Comparable[5][5];
     popBlower(ballBlower);
     popCard(Card, ballBlower);
+
     int drawnBall = 0;
-//    printBlower(ballBlower);
+
     drawnBall = (int)(drawBall(ballBlower, drawnBall))[0];
     ballBlower = (int[])(drawBall(ballBlower, drawnBall))[1];
-    drawnBall = (int)Card[0][4];
+
+    drawnBall = (int)Card[0][0];
     markX(Card, drawnBall);
-    drawnBall = (int)Card[1][3];
+    drawnBall = (int)Card[1][0];
     markX(Card, drawnBall);
-//    drawnBall = (int)Card[2][2];
+    drawnBall = (int)Card[2][0];
     markX(Card, drawnBall);
-    drawnBall = (int)Card[3][1];
+    drawnBall = (int)Card[3][0];
     markX(Card, drawnBall);
     drawnBall = (int)Card[4][0];
     markX(Card, drawnBall);
 
     printCard(Card);
-    System.out.println(checkBingo(Card));
+    System.out.println(checkBingo(Card, 0));
   }
+*/
 
 } //end bingoCard
