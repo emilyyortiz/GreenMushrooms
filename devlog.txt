@@ -116,4 +116,5 @@ Kartik: Updated flowchart, made sure headings were present on all files.
 2022-01-21 Before Class
 --------------------------------------------------------------
 Emily :: Worked on biasBingo.java
+Tasnim :: Attempted to find why drawnBall didn't get marked on the card when it was matching sometimes 
 ==============================================================
