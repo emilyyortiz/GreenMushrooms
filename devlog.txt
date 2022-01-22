@@ -15,6 +15,8 @@ figured out inheritance for our classes to make different versions of bingo game
 figured out how to "save" the state of ballBlower after drawBall method by making it return an array of 2 Objects
 Added methods in SortsNSearches that took int arrays instead of Comparable arrays
 Figured out that we had to make a copy of ballBlower in popCard to keep ballBlower unchanged
+Figured out that markX didn't sometimes work because the drawnBall input was wrong because the drawBall method didn't handle drawing an already used ball correctly;
+  Solved it by using a while loop instead of recursion (TOOK A LONG TIME TO FIGURE THIS OUT!!! :( )
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
@@ -113,8 +115,13 @@ Tasnim :: Finished BingoCard.java methods, BingoGame.java methods, and Woo.java 
 Kartik: Updated flowchart, made sure headings were present on all files.
 ==============================================================
 
-2022-01-21 Before Class
+2022-01-21 In Class
 --------------------------------------------------------------
 Emily :: Worked on biasBingo.java
-Tasnim :: Attempted to find why drawnBall didn't get marked on the card when it was matching sometimes 
+Tasnim :: Attempted to find why drawnBall didn't get marked on the card when it was matching sometimes
+==============================================================
+
+2022-01-22 Home
+--------------------------------------------------------------
+Tasnim :: Fixed issue found in class (regBingo fully works now)
 ==============================================================

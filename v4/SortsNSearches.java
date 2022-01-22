@@ -16,15 +16,18 @@ public class SortsNSearches {
      post: returns index of first occurrence of target, or
      returns -1 if target not found
   **/
-  public static int linSearch ( Comparable[] a, Comparable target )
-  {
-    int n = a.length;
-        for (int i = 0; i < n; i++)
-        {
-            if (a[i] == target)
-                return i;
-        }
-        return -1;
+  public static int linSearch ( Comparable[] a, Comparable target ) {
+  int tPos = -1;
+   int i = 0;
+
+   while ( i < a.length ) {
+     if ( a[i].equals(target) ) {
+       tPos = i;
+       break;
+     }
+     i++;
+   }
+   return tPos;
   }
 
 
@@ -285,5 +288,15 @@ public class SortsNSearches {
     //return working ArrayList
     return data;
   }//end insertionSort
+
+  public static void wait(int millis)
+ {
+   try {
+     Thread.sleep(millis);
+   }
+   catch (InterruptedException e) {
+   }
+ }
+
 
 } //end SortsNSearches

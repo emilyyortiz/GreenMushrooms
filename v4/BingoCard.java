@@ -31,23 +31,29 @@ public class BingoCard {
       //shave off trailing comma
       foo = foo.substring( 0, foo.length() - 2);
     foo += "]";
-    System.out.println(ball_num +" Balls left in the Ball Blower:");
+    System.out.println("\n" + ball_num +" Balls left in the Ball Blower:");
     System.out.println();
     System.out.println(foo);
   }
 
   // draws a random ball from the ballBlower
   public static Object[] drawBall(int[] Blower, int drawnBall) {
+    System.out.println("\ndrawing ball...\n");
+    tools.wait(500);
     int random = (int)Blower[((int)(Math.random() * Blower.length-1))];
+    while (random <= -1) {
+      random = (int)Blower[((int)(Math.random() * Blower.length-1))];
+    //  System.out.println("drew again...");
+    }
     if (random > -1) {
       drawnBall = random;
+  //    System.out.println("Confirmed.");
       int i = tools.linSearchint(Blower, random);
       Blower[i] = -1;
       Blower = tools.selectionSortint(Blower);
       System.out.print("You drew a "+ drawnBall + " ball!\n");
-    } else {
-      drawBall(Blower, drawnBall);
     }
+
     System.out.println();
     return new Object[]{drawnBall, Blower};
 
@@ -68,7 +74,7 @@ public class BingoCard {
         int temp = (int)(Math.random() * data.length);
         if ( data[temp] != -1) {
           randomIndex = temp;
-          row[pos] = data[randomIndex];
+          row[pos] = (Comparable)data[randomIndex];
           //making sure there are no repeats
           data[randomIndex] = -1;
           pos++;
@@ -83,6 +89,7 @@ public class BingoCard {
   public static void printCard( Comparable[][] Card) {
     System.out.println("Your current Bingo Card:");
     System.out.println("");
+    tools.wait(200);
     int rows = Card.length;
         int columns = Card[0].length;
         String str = "|\t";
@@ -98,22 +105,21 @@ public class BingoCard {
 
   // marks X where the ballDrawn number is present in the bingo card
   public static Comparable[][] markX( Comparable[][] Card, int ballDrawn) {
-    int match = -1;
+    System.out.println("Checking for matches in the card...\n");
+    tools.wait(100);
+    int match = -2;
     boolean found = false;
     for (Comparable[] row : Card) {
       match = (int)(tools.linSearch(row, (Comparable)ballDrawn));
-      System.out.println(match);
+  //    System.out.println(match + ", Ball: " + ballDrawn);
       if (match > -1) {
         Comparable temp = row[match];
         row[match] = "X";
         System.out.println("X marks the spot at " + temp + ".\n");
         match = -1;
         found = true;
-
-      } else {
-        System.out.println("AGHHH");
-        found = false;
         break;
+
       }
     }
     if (found == false) {
@@ -125,6 +131,8 @@ public class BingoCard {
 
   // checks 12 possible winning bingo states to see if the game is over
   public static boolean checkBingo( Comparable[][] Card, int turn_num) {
+    System.out.println("\nchecking for BINGO...");
+    tools.wait(500);
     boolean match = false;
 
     // checks 5 rows
@@ -191,34 +199,5 @@ public class BingoCard {
 
   return match;
  } //end method
-
-/*
-  //testing above methods
-  public static void main(String args[]){
-    int[] ballBlower = new int[99];
-    Comparable[][] Card = new Comparable[5][5];
-    popBlower(ballBlower);
-    popCard(Card, ballBlower);
-
-    int drawnBall = 0;
-
-    drawnBall = (int)(drawBall(ballBlower, drawnBall))[0];
-    ballBlower = (int[])(drawBall(ballBlower, drawnBall))[1];
-
-    drawnBall = (int)Card[0][0];
-    markX(Card, drawnBall);
-    drawnBall = (int)Card[1][0];
-    markX(Card, drawnBall);
-    drawnBall = (int)Card[2][0];
-    markX(Card, drawnBall);
-    drawnBall = (int)Card[3][0];
-    markX(Card, drawnBall);
-    drawnBall = (int)Card[4][0];
-    markX(Card, drawnBall);
-
-    printCard(Card);
-    System.out.println(checkBingo(Card, 0));
-  }
-*/
 
 } //end bingoCard

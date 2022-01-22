@@ -8,6 +8,7 @@ Time Spent: 6 Hours
 import java.util.Scanner;
 
 public class BingoGame {
+  private static SortsNSearches tools = new SortsNSearches();
   static Scanner in = new Scanner (System.in);
 
   protected BingoCard Card = new BingoCard();
@@ -30,7 +31,7 @@ public class BingoGame {
 
     System.out.print("\nStarting your game...\n");
     Card.printCard(bingoCard);
-
+    System.out.println("\n----------------------------------------------------");
     System.out.print("\nPress enter to draw your first ball: ");
     String statement = in.nextLine();
 
@@ -40,7 +41,13 @@ public class BingoGame {
     Object[] drawBallResult = (Card.drawBall(ballBlower, ballDrawn));
     ballDrawn = (int)drawBallResult[0];
     ballBlower = (int[])drawBallResult[1];
-    System.out.println("\nType Blower to check what balls are left.\n" );
+    bingoCard = Card.markX(bingoCard, ballDrawn);
+    Card.printCard( bingoCard);
+
+    System.out.println("\n----------------------------------------------------");
+    tools.wait(100);
+    System.out.println("\nType Blower to check what balls are left. " );
+    System.out.print("\nOr press enter to continue: ");
     String statement = in.nextLine();
     if (statement.equals("Blower")) {
       Card.printBlower(ballBlower);
@@ -48,21 +55,29 @@ public class BingoGame {
       statement = in.nextLine();
     }
 
-    bingoCard = Card.markX(bingoCard, ballDrawn);
-    Card.printCard( bingoCard);
     _BINGO = Card.checkBingo(bingoCard, turn_num);
     turn_num++;
-
     }
+
 
   BingoGame() {
     initializeGame();
     while (_BINGO == false) {
       bingoTurn();
-      System.out.print("\nPress enter to draw another ball:");
+
+      /*
+      System.out.println("\n----------------------------------------------------");
+      System.out.println("\nType Blower to check what balls are left. " );
+      System.out.print("\nOr press enter to draw another ball: ");
       String statement = in.nextLine();
+      if (statement.equals("Blower")) {
+        Card.printBlower(ballBlower);
+        System.out.println("\nPress enter to continue: " );
+        statement = in.nextLine();
+      }
+      */
     }
-    System.out.println("You little runt, congrats! It took ONLY " + turn_num + " tries!");
+    System.out.println("You little runt, congrats! It took ONLY " + turn_num + " turns!\n");
 
   } //constructor
 

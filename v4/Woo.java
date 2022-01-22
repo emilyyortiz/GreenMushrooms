@@ -19,8 +19,9 @@ public class Woo {
   }
 
   public static void Welcome() {
+    System.out.println("\n----------------------------------------------------");
     System.out.println("\nWelcome to Bingo!");
-    System.out.println("Made by Tasnim Chowdhury, Kartik Vanjani, and Emily Ortiz\n\n");
+    System.out.println("Made by: Tasnim Chowdhury, Kartik Vanjani, and Emily Ortiz\n\n");
     System.out.print("What is your name? ");
     String player = in.nextLine();
     if (player.equals("Mr. Mykolyk")) {
@@ -50,7 +51,7 @@ public class Woo {
       }
       play(type);
       gameCtr++;
-      System.out.print("Would you like to play again? Type 'No' to stop and any key to continue: ");
+      System.out.print("Would you like to play again? Type 'No' to stop or press any key to continue: ");
       statement = in.nextLine();
     }
   }
