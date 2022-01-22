@@ -7,5 +7,5 @@ We created the simple game of Bingo on a 5 by 5 board with 99 balls, in java. Th
 ## How to Launch:
 - Cd into the root directory.
 - Compile ```javac Woo.java```.
-- Run '''java woo'''.
+- Run ```java woo```.
 - Then, follow the prompts and press ```enter``` to draw the first ball. Type ```Blower``` when you want to check the balls left in the ball blower. Continue to follow the prompts.
