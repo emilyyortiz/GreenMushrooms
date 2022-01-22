@@ -3,8 +3,9 @@ GreenMushrooms: Emily Ortiz, Tasnim Chowdhury, Kartik Vanjani
 APCS PD8
 FP: Show Us What You Got
 2022-01-20
-Time Spent: 5.5 Hours
+Time Spent: .5 Hours
 */
+
 import java.util.ArrayList;
 
 // linSearch, binSearch, bubbleSort, selectionSort, insertionSort
@@ -16,20 +17,20 @@ public class SortsNSearches {
      post: returns index of first occurrence of target, or
      returns -1 if target not found
   **/
-  public static int linSearch ( Comparable[] a, Comparable target )
-  {
-    int tPos = -1;
-    int i = 0;
+  public static int linSearch ( Comparable[] a, Comparable target ) {
+  int tPos = -1;
+   int i = 0;
 
-    while ( i < a.length ) {
-        if (a[i] == target){
-            tPos = i;
-            break;
-        }
-        i++;
-    }
-    return tPos;
+   while ( i < a.length ) {
+     if ( a[i].equals(target) ) {
+       tPos = i;
+       break;
+     }
+     i++;
+   }
+   return tPos;
   }
+
 
   public static int linSearchint ( int[] a, int target )
   {
@@ -45,6 +46,7 @@ public class SortsNSearches {
     }
     return tPos;
   }
+
 
   /**
      int binSearch(Comparable[],Comparable) -- searches an array of
@@ -287,5 +289,15 @@ public class SortsNSearches {
     //return working ArrayList
     return data;
   }//end insertionSort
+
+  public static void wait(int millis)
+ {
+   try {
+     Thread.sleep(millis);
+   }
+   catch (InterruptedException e) {
+   }
+ }
+
 
 } //end SortsNSearches
