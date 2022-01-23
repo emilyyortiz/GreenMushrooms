@@ -123,5 +123,5 @@ Tasnim :: Attempted to find why drawnBall didn't get marked on the card when it 
 
 2022-01-22 Home
 --------------------------------------------------------------
-Tasnim :: Fixed issue found in class (regBingo fully works now)
+Tasnim :: Fixed issue found in class (regBingo fully works now) + fixed readme + added wait time
 ==============================================================
