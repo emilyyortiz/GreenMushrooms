@@ -5,11 +5,13 @@ FP: Show Us What You Got
 2022-01-20
 Time Spent: 11 Hours
 */
+import java.util.Scanner;
 
 public class BingoCard {
   private static SortsNSearches tools = new SortsNSearches();
+  private static Scanner in = new Scanner (System.in);
 
-  // populates ballBlower with 99 balls numbered 1 to 99 - Emily
+  // populates ballBlower with 99 balls numbered 1 to 99
   public static int[] popBlower(int[] Blower) {
     for(int i = 0; i <= 98; i++){
       Blower[i] = i + 1;
@@ -17,7 +19,7 @@ public class BingoCard {
     return Blower;
   }
 
-  // prints ballBlower - Emily
+  // prints ballBlower
   public static void printBlower(int[] Blower) {
     String foo = "[";
     int ball_num = 0;
@@ -36,16 +38,18 @@ public class BingoCard {
     System.out.println(foo);
   }
 
-  // draws a random ball from the ballBlower - Tasnim
-  public static Object[] drawBall(int[] Blower, int drawnBall) {
+  // draws a random ball from the ballBlower
+  public static Object[] drawBall0(int[] Blower, int drawnBall) {
     System.out.println("\ndrawing ball...\n");
     tools.wait(500);
     int random = (int)Blower[((int)(Math.random() * Blower.length-1))];
     while (random <= -1) {
       random = (int)Blower[((int)(Math.random() * Blower.length-1))];
+    //  System.out.println("drew again...");
     }
     if (random > -1) {
       drawnBall = random;
+  //    System.out.println("Confirmed.");
       int i = tools.linSearchint(Blower, random);
       Blower[i] = -1;
       Blower = tools.selectionSortint(Blower);
@@ -57,7 +61,64 @@ public class BingoCard {
 
   }
 
-  // populates bingoCard with bingoCard.length-1 random numbers from the blower (no repeats) -Tasnim
+  // draws a ball from the upper or lower half ballBlower -Tasnim
+  public static Object[] drawBall1(int[] Blower, int drawnBall) { //- Tasnim
+
+    //choosing
+    System.out.println("\nType 0 to draw a ball from the lower half.");
+    System.out.println("Type 1 to draw a ball from the upper half.");
+    System.out.println("Type 2 to draw a ball randomly.\n");
+    System.out.print("Lower, Upper, or Random?: ");
+    String s = in.nextLine();
+    int half = -1;
+
+    while (half == -1){
+      if (s.equals("0")) {
+         half = 0;
+      }
+      else if (s.equals("1")) {
+         half = 1;
+      }
+      else if (s.equals("2")) {
+       half = 2;
+      }
+      else{
+        System.out.println("Please type a valid input!");
+        s = in.nextLine();
+        //drawBall1(int[] Blower; int drawnBall);
+      }
+    }
+
+    System.out.println("\ndrawing ball...\n");
+    tools.wait(500);
+
+    int random = -1;
+    while (random <= -1) {
+      if (half == 2) {
+        random = (int)Blower[((int)(Math.random() * Blower.length-1))]; //normal
+      }
+      if (half == 0) {
+        random = (int)Blower[((int)(Math.random() * ((Blower.length-1)/2) ))]; //lower
+      }
+      if (half == 1) {
+        random = (int)Blower[((int)(Math.random() * ((Blower.length-1)/2 + 50) ))]; //upper
+      }
+    }
+
+    if (random > -1) {
+      drawnBall = random;
+      int i = tools.linSearchint(Blower, random);
+      Blower[i] = -1;
+      Blower = tools.selectionSortint(Blower);
+      System.out.print("You drew a "+ drawnBall + " ball!\n");
+    }
+
+    System.out.println();
+    return new Object[]{drawnBall, Blower};
+  }
+
+
+  // populates bingoCard with bingoCard.length-1 random numbers from the blower (no repeats)
   public static Comparable[][] popCard( Comparable[][] Card, int[] Blower) {
     //make deep copy of blower
     int[] data = new int[Blower.length];
@@ -83,7 +144,7 @@ public class BingoCard {
     return Card;
   }
 
-  // prints 5 by 5 bingoCard in matrix format -Tasnim
+  // prints 5 by 5 bingoCard in matrix format
   public static void printCard( Comparable[][] Card) {
     System.out.println("Your current Bingo Card:");
     System.out.println("");
@@ -101,7 +162,7 @@ public class BingoCard {
   }
 }
 
-  // marks X where the ballDrawn number is present in the bingo card -Tasnim
+  // marks X where the ballDrawn number is present in the bingo card
   public static Comparable[][] markX( Comparable[][] Card, int ballDrawn) {
     System.out.println("Checking for matches in the card...\n");
     tools.wait(100);
@@ -109,6 +170,7 @@ public class BingoCard {
     boolean found = false;
     for (Comparable[] row : Card) {
       match = (int)(tools.linSearch(row, (Comparable)ballDrawn));
+  //    System.out.println(match + ", Ball: " + ballDrawn);
       if (match > -1) {
         Comparable temp = row[match];
         row[match] = "X";
@@ -126,7 +188,7 @@ public class BingoCard {
     return Card;
   }
 
-  // checks 12 possible winning bingo states to see if the game is over -Tasnim
+  // checks 12 possible winning bingo states to see if the game is over
   public static boolean checkBingo( Comparable[][] Card, int turn_num) {
     System.out.println("\nchecking for BINGO...");
     tools.wait(500);
