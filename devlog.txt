@@ -137,9 +137,9 @@ Emily :: Worked on biasBingo.java
 Tasnim :: Attempted to find why drawnBall didn't get marked on the card when it was matching sometimes
 ==============================================================
 
-2022-01-22 Home
+2022-01-22 and 2022-01-23 Home
 --------------------------------------------------------------
 Tasnim :: Fixed issue found in class (regBingo fully works now) + fixed readme + added wait time + wrote biasBingo drawball method and worked on implementing it and making the decision to get rid of subclass
 Kartik:: Worked on biasBingo method, updated devlog.
-Emily :: implemented biasBingo properly
+Emily :: implemented biasBingo properly, added v5 files to root
 ==============================================================
