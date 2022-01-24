@@ -139,6 +139,7 @@ Tasnim :: Attempted to find why drawnBall didn't get marked on the card when it 
 
 2022-01-22 Home
 --------------------------------------------------------------
-Tasnim :: Fixed issue found in class (regBingo fully works now) + fixed readme + added wait time
+Tasnim :: Fixed issue found in class (regBingo fully works now) + fixed readme + added wait time + wrote biasBingo drawball method and worked on implementing it and making the decision to get rid of subclass
 Kartik:: Worked on biasBingo method, updated devlog.
+Emily :: implemented biasBingo properly
 ==============================================================
