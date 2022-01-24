@@ -21,25 +21,40 @@ UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
-Sometimes the ball drawn matches a number on the card but it doesn't markX and identify it as a match but it works fine other times
+- Sometimes the ball drawn matches a number on the card but it doesn't markX and identify it as a match but it works fine other times
+-The upperhalf was giving some trouble.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- The coolest thing we probably encountered was implementing any sort of bias method. This is because it involved using a lot of the 
+practices we learned such as random from lower half and upper half, and all of it together proved to be a challenge but putting all
+of those aspects together made it a cool attribute.
+- Colors in java.
+- Marking certain places as x required us to first recognize that sometimes it might not because the indexes would sometimes not
+be the proper index the program was looking at.
 wow! oo!...
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
-we added a new version/option of bingo to add variety into gameplay
-changed the ballBlower to go from 1 to 99 instead of 1 to 100 to make formatting the card easier
-Made most of the gameplay process in SuperClass BingoGame instead of in Woo or in subclasses
-We added a biasBingo method to incorporate some sort of variety in the bingo game.
+- we added a new version/option of bingo to add variety into gameplay
+- changed the ballBlower to go from 1 to 99 instead of 1 to 100 to make formatting the card easier--
+- Made most of the gameplay process in SuperClass BingoGame instead of in Woo or in subclasses
+- We added a biasBingo method to incorporate some sort of variety in the bingo game.
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
 ||||||||||||||||||||||||||||||||||||||||||
-Return Object arrays when you want to return multiple values
+- Return Object arrays when you want to return multiple values
+- DO NOT try to change any other primitive types to objects. It will not end well.
+- In general, if an object is one type in one of the files, calling it as the same type is crucial.
+- Learned that having a plan is crucial so that we could get this done in time.
+- Certain variables have to be private or java does not deem them "safe".
+- TEAMWORK MAKES THE DREAMWORK
+- Having a driver file really benefits the program as a whole because having the main method in one file is a really
+good way to stay organized.
+- When something does go wrong, with a driver file, it is much easier to catch what is going wrong, in this case, Woo.java.
 
 
 
@@ -124,5 +139,7 @@ Tasnim :: Attempted to find why drawnBall didn't get marked on the card when it 
 
 2022-01-22 Home
 --------------------------------------------------------------
-Tasnim :: Fixed issue found in class (regBingo fully works now) + fixed readme + added wait time
+Tasnim :: Fixed issue found in class (regBingo fully works now) + fixed readme + added wait time + wrote biasBingo drawball method and worked on implementing it and making the decision to get rid of subclass
+Kartik:: Worked on biasBingo method, updated devlog.
+Emily :: implemented biasBingo properly
 ==============================================================
