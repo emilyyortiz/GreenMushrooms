@@ -19,7 +19,7 @@ public class BingoCard {
     return Blower;
   }
 
-  // prints ballBlower
+  // prints ballBlower- Emily
   public static void printBlower(int[] Blower) {
     String foo = "[";
     int ball_num = 0;
@@ -38,7 +38,7 @@ public class BingoCard {
     System.out.println(foo);
   }
 
-  // draws a random ball from the ballBlower
+  // draws a random ball from the ballBlower- Tasnim
   public static Object[] drawBall0(int[] Blower, int drawnBall) {
     System.out.println("\ndrawing ball...\n");
     tools.wait(500);
@@ -118,7 +118,7 @@ public class BingoCard {
   }
 
 
-  // populates bingoCard with bingoCard.length-1 random numbers from the blower (no repeats)
+  // populates bingoCard with bingoCard.length-1 random numbers from the blower (no repeats)- Tasnim
   public static Comparable[][] popCard( Comparable[][] Card, int[] Blower) {
     //make deep copy of blower
     int[] data = new int[Blower.length];
@@ -144,7 +144,7 @@ public class BingoCard {
     return Card;
   }
 
-  // prints 5 by 5 bingoCard in matrix format
+  // prints 5 by 5 bingoCard in matrix format- Tasnim
   public static void printCard( Comparable[][] Card) {
     System.out.println("Your current Bingo Card:");
     System.out.println("");
@@ -162,7 +162,7 @@ public class BingoCard {
   }
 }
 
-  // marks X where the ballDrawn number is present in the bingo card
+  // marks X where the ballDrawn number is present in the bingo card- Tasnim
   public static Comparable[][] markX( Comparable[][] Card, int ballDrawn) {
     System.out.println("Checking for matches in the card...\n");
     tools.wait(100);
@@ -188,7 +188,7 @@ public class BingoCard {
     return Card;
   }
 
-  // checks 12 possible winning bingo states to see if the game is over
+  // checks 12 possible winning bingo states to see if the game is over- Tasnim
   public static boolean checkBingo( Comparable[][] Card, int turn_num) {
     System.out.println("\nchecking for BINGO...");
     tools.wait(500);
