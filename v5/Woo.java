@@ -18,7 +18,7 @@ public class Woo {
     int gameNum = 0;
   }
 
-  public static void Welcome() {
+  public static void Welcome() { //-Tasnim
     System.out.println("\n----------------------------------------------------");
     System.out.println("\nWelcome to Bingo!");
     System.out.println("Made by: Tasnim Chowdhury, Kartik Vanjani, and Emily Ortiz\n\n");
@@ -32,7 +32,7 @@ public class Woo {
     System.out.println("Hi there, " + player + "! Press enter to get started:");
   }
 
-  public static void start() {
+  public static void start() { //-Tasnim
     String statement = in.nextLine();
     while (!statement.equals("No")){
       System.out.print("Type 0 for Regular Bingo. Type 1 for Biased Bingo. ");
@@ -56,7 +56,7 @@ public class Woo {
     }
   }
 
-  public static void play(String type) {
+  public static void play(String type) { //-Tasnim
     if (type.equals("regBingo")) {
       BingoGame game = new BingoGame("regBingo");
     }
