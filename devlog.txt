@@ -25,6 +25,12 @@ Sometimes the ball drawn matches a number on the card but it doesn't markX and i
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- The coolest thing we probably encountered was implementing any sort of bias method. This is because it involved using a lot of the 
+practices we learned such as random from lower half and upper half, and all of it together proved to be a challenge but putting all
+of those aspects together made it a cool attribute.
+- Colors in java.
+- Marking certain places as x required us to first recognize that sometimes it might not because the indexes would sometimes not
+be the proper index the program was looking at.
 wow! oo!...
 
 MID-DEVELOPMENT DESIGN CHANGES
