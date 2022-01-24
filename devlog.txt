@@ -41,6 +41,7 @@ we changed ___ to ___ bc...
 - changed the ballBlower to go from 1 to 99 instead of 1 to 100 to make formatting the card easier--
 - Made most of the gameplay process in SuperClass BingoGame instead of in Woo or in subclasses
 - We added a biasBingo method to incorporate some sort of variety in the bingo game.
+- Got rid of subclasses for versions and instead opted for different methods because it was easier to do it that way 
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
