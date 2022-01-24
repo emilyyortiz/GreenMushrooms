@@ -9,7 +9,11 @@ public class biasBingo extends BingoGame {
 
   private static BingoCard Card = new BingoCard();
 
+<<<<<<< HEAD
 // draws a ball from the upper or lower half ballBlower -Tasnim
+=======
+  // draws a ball from the upper or lower half ballBlower
+>>>>>>> 864488ccc9fb8fa5b91636189952653a7e23b2bc
   public static Object[] drawBall(int[] Blower, int drawnBall) { //- Tasnim
 
     //choosing
@@ -58,11 +62,20 @@ public class biasBingo extends BingoGame {
       Blower = tools.selectionSortint(Blower);
       System.out.print("You drew a "+ drawnBall + " ball!\n");
     }
+<<<<<<< HEAD
 
     System.out.println();
     return new Object[]{drawnBall, Blower};
   }
 public static void ballDrawn ( 
+=======
+
+    System.out.println();
+    return new Object[]{drawnBall, Blower};
+  }
+
+  public void bingoTurn() {
+>>>>>>> 864488ccc9fb8fa5b91636189952653a7e23b2bc
     ballDrawn = drawBall(ballBlower, ballDrawn);
     bingoCard = Card.markX(bingoCard, ballDrawn);
     turn_num++;
