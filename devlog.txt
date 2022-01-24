@@ -21,8 +21,7 @@ UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
-- Sometimes the ball drawn matches a number on the card but it doesn't markX and identify it as a match but it works fine other times
--The upperhalf was giving some trouble.
+-The biasbingo method sometimes does not properly draw a ball from upper half of blower
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
