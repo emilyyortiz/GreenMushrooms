@@ -7,7 +7,7 @@ Time Spent: 6 Hours
 */
 import java.util.Scanner;
 
-public class BingoGame {
+public class BingoGame { //-Tasnim
   private static SortsNSearches tools = new SortsNSearches();
 
   static Scanner in = new Scanner (System.in);
@@ -86,7 +86,7 @@ public class BingoGame {
     
   }
 
-  BingoGame(String type) {
+  BingoGame(String type) { //-Tasnim
     initializeGame();
     while (_BINGO == false) {
       if (type == "regBingo") {
